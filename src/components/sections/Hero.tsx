@@ -53,21 +53,23 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="mb-6 flex flex-col items-center"
+          className="mb-10 w-full"
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <img 
-            src="/lovable-uploads/3efc66c6-3e03-4899-a967-63ba0eb4f50c.png" 
-            alt="Infor SHIFT Brain Logo" 
-            className="h-32 w-auto mx-auto mb-4"
-          />
-          <img 
-            src="/lovable-uploads/19635b6a-83e2-4dcc-9bb0-89e19d03b96b.png" 
-            alt="Infor SHIFT Text Logo" 
-            className="h-16 w-auto mx-auto"
-          />
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 w-full">
+            <img 
+              src="/lovable-uploads/3efc66c6-3e03-4899-a967-63ba0eb4f50c.png" 
+              alt="Infor SHIFT Brain Logo" 
+              className="h-auto w-60 md:w-80 object-contain"
+            />
+            <img 
+              src="/lovable-uploads/19635b6a-83e2-4dcc-9bb0-89e19d03b96b.png" 
+              alt="Infor SHIFT Text Logo" 
+              className="h-auto w-64 md:w-96 object-contain"
+            />
+          </div>
         </motion.div>
 
         <motion.h1

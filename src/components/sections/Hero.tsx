@@ -47,9 +47,7 @@ const Hero = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-turquoise bg-turquoise/10 rounded-full">
-            Sistemas e Consultoria TI
-          </div>
+         
         </motion.div>
 
         <motion.div

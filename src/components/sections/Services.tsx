@@ -52,7 +52,7 @@ const Services = () => {
   ];
   
   return (
-    <section ref={sectionRef} id="services" className="bg-slate-50 py-[23px]">
+    <section ref={sectionRef} id="services" className="bg-darkgray-800 py-[23px]">
       <div className="section-container">
         <motion.div 
           className="text-center max-w-3xl mx-auto mb-16" 
@@ -74,7 +74,7 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div 
               key={index} 
-              className="bg-white rounded-xl p-6 shadow-subtle card-hover"
+              className="bg-darkgray-700 rounded-xl p-6 shadow-subtle card-hover"
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.7, delay: 0.2 + index * 0.1 }}
@@ -82,8 +82,8 @@ const Services = () => {
               <div className="mb-4 bg-turquoise/10 w-16 h-16 rounded-lg flex items-center justify-center">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-darkgray-700">{service.title}</h3>
-              <p className="text-slate-600">{service.description}</p>
+              <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
+              <p className="text-slate-300">{service.description}</p>
             </motion.div>
           ))}
         </div>

@@ -1,7 +1,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -58,6 +58,13 @@ const Contact = () => {
       details: 'suporteinforshift@gmail.com',
       action: 'mailto:suporteinforshift@gmail.com',
       actionText: 'Contato via Email'
+    },
+    {
+      icon: <Instagram className="h-6 w-6 text-turquoise" />,
+      title: 'Instagram',
+      details: '@infor.shift',
+      action: 'https://www.instagram.com/infor.shift/',
+      actionText: 'Siga-nos no Instagram'
     },
     {
       icon: <MapPin className="h-6 w-6 text-turquoise" />,

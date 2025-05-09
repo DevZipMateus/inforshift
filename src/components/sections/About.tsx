@@ -1,7 +1,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Target, HeartHandshake } from 'lucide-react';
+import { Brain, Target, HeartHandshake, Instagram } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -93,6 +94,21 @@ const About = () => {
           <p className="section-subtitle text-gray-300 mt-4">
             Com sede em Arapiraca – AL e atendimento remoto em todo o Brasil, somos movidos por um compromisso simples: entregar soluções que fazem a diferença na rotina dos nossos clientes.
           </p>
+          
+          <motion.div 
+            className="mt-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
+            <Button 
+              onClick={() => window.open('https://www.instagram.com/infor.shift/', '_blank')}
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
+            >
+              <Instagram className="mr-2 h-5 w-5" />
+              Siga-nos no Instagram
+            </Button>
+          </motion.div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">

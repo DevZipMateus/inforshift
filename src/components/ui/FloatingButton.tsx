@@ -38,7 +38,7 @@ const FloatingButton = () => {
       className={cn(
         'fixed bottom-6 right-6 z-40 flex items-center justify-center w-16 h-16 rounded-full shadow-elevation transition-all duration-300 hover:scale-110',
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0',
-        isAnimating ? 'animate-bounce' : ''
+        isAnimating ? 'pulse-ring' : ''
       )}
       aria-label="Contato via WhatsApp"
     >

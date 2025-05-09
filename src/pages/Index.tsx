@@ -7,6 +7,7 @@ import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Services from '@/components/sections/Services';
 import Contact from '@/components/sections/Contact';
+import Partner from '@/components/sections/Partner';
 import FloatingButton from '@/components/ui/FloatingButton';
 import { motion } from 'framer-motion';
 
@@ -50,6 +51,7 @@ const Index = () => {
         <Hero />
         <About />
         <Services />
+        <Partner />
         <Contact />
       </main>
       <FloatingButton />

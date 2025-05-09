@@ -62,7 +62,7 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6 text-turquoise" />,
       title: 'Endereço',
-      details: 'Rua Floracy da Silva Barros, 141, APTO102, Arapiraca - AL',
+      details: 'Rua Floracy da Silva Barros, 141, Arapiraca - AL',
       action: 'https://maps.google.com',
       actionText: 'Ver no Mapa'
     }

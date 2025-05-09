@@ -40,7 +40,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 text-turquoise flex-shrink-0 mt-0.5" />
-                <span className="text-slate-300">Rua Floracy da Silva Barros, 141, APTO102<br />Arapiraca - AL</span>
+                <span className="text-slate-300">Rua Floracy da Silva Barros, 141<br />Arapiraca - AL</span>
               </div>
               <div className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-turquoise flex-shrink-0" />

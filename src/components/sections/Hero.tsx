@@ -33,12 +33,12 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center bg-slate-50 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-darkgray-900 overflow-hidden"
       id="home"
     >
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-turquoise/10 to-slate-50/95"></div>
-        <div className="absolute inset-0 opacity-40 bg-[url('/images/pattern.svg')] bg-repeat"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-turquoise/5 to-darkgray-900/95"></div>
+        <div className="absolute inset-0 opacity-10 bg-[url('/images/pattern.svg')] bg-repeat"></div>
       </div>
 
       <div className="section-container relative z-10 flex flex-col items-center text-center">
@@ -53,20 +53,25 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="mb-6"
+          className="mb-6 flex flex-col items-center"
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <img 
-            src="/lovable-uploads/a48b6946-07b3-49bd-b280-bc396f94a40e.png" 
-            alt="Infor SHIFT Logo" 
-            className="h-32 w-auto mx-auto"
+            src="/lovable-uploads/3efc66c6-3e03-4899-a967-63ba0eb4f50c.png" 
+            alt="Infor SHIFT Brain Logo" 
+            className="h-32 w-auto mx-auto mb-4"
+          />
+          <img 
+            src="/lovable-uploads/19635b6a-83e2-4dcc-9bb0-89e19d03b96b.png" 
+            alt="Infor SHIFT Text Logo" 
+            className="h-16 w-auto mx-auto"
           />
         </motion.div>
 
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight mb-6 max-w-4xl text-darkgray-700"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight mb-6 max-w-4xl text-white"
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -76,7 +81,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-slate-600 max-w-2xl mb-8"
+          className="text-lg md:text-xl text-gray-300 max-w-2xl mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -109,10 +114,10 @@ const Hero = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
         >
-          <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center p-1">
-            <div className="w-1.5 h-3 bg-slate-400 rounded-full animate-bounce"></div>
+          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center p-1">
+            <div className="w-1.5 h-3 bg-gray-400 rounded-full animate-bounce"></div>
           </div>
-          <span className="text-sm text-slate-500 mt-2">Role para baixo</span>
+          <span className="text-sm text-gray-400 mt-2">Role para baixo</span>
         </motion.div>
       </div>
     </section>

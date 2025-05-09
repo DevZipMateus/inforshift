@@ -97,7 +97,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-darkgray-800 text-white font-sans;
     -webkit-font-smoothing: antialiased;
   }
   
@@ -113,19 +113,19 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-3 text-gray-800;
+    @apply text-3xl md:text-4xl font-bold mb-3 text-white;
   }
   
   .section-subtitle {
-    @apply text-lg md:text-xl text-slate-600 max-w-3xl mb-8;
+    @apply text-lg md:text-xl text-gray-300 max-w-3xl mb-8;
   }
   
   .btn-primary {
-    @apply bg-turquoise hover:bg-turquoise-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200;
+    @apply bg-turquoise hover:bg-turquoise-600 text-darkgray-900 px-6 py-3 rounded-lg font-medium transition-all duration-200;
   }
   
   .btn-secondary {
-    @apply bg-white border border-slate-200 hover:border-slate-300 text-slate-700 px-6 py-3 rounded-lg font-medium shadow-subtle transition-all duration-200;
+    @apply bg-darkgray-700 border border-darkgray-600 hover:border-darkgray-500 text-gray-200 px-6 py-3 rounded-lg font-medium shadow-subtle transition-all duration-200;
   }
   
   .card-hover {
@@ -133,7 +133,7 @@
   }
   
   .nav-link {
-    @apply relative px-3 py-2 text-slate-700 hover:text-turquoise transition-colors duration-200 font-medium;
+    @apply relative px-3 py-2 text-gray-300 hover:text-turquoise transition-colors duration-200 font-medium;
   }
   
   .nav-link-active {

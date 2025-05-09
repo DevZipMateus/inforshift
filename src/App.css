@@ -8,9 +8,9 @@
 
 /* Base styles for the 60-30-10 rule */
 :root {
-  --color-primary: #f8fafc; /* Slate 50 - 60% */
+  --color-primary: #222222; /* Dark Gray - 60% */
   --color-secondary: #40E0D0; /* Turquoise - 30% */
-  --color-accent: #333333; /* Dark Gray - 10% */
+  --color-accent: #f8fafc; /* Light Gray - 10% */
 }
 
 body {

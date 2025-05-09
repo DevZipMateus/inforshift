@@ -1,7 +1,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Target, BarChart3 } from 'lucide-react';
+import { Brain, Target, HeartHandshake } from 'lucide-react';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,22 +31,21 @@ const About = () => {
 
   const features = [
     {
-      icon: <Users className="h-8 w-8 text-blue-500" />,
+      icon: <Target className="h-8 w-8 text-turquoise" />,
       title: 'Missão',
       description:
-        'Fornecer serviços contábeis de alta qualidade que capacitem nossos clientes a tomar decisões financeiras informadas e estratégicas para o crescimento sustentável de seus negócios.',
+        'Oferecer sistemas robustos, consultoria personalizada e suporte ágil, contribuindo para o crescimento e eficiência dos nossos clientes.',
     },
     {
-      icon: <Target className="h-8 w-8 text-blue-500" />,
+      icon: <Brain className="h-8 w-8 text-turquoise" />,
       title: 'Visão',
       description:
-        'Ser reconhecidos como referência em soluções contábeis inovadoras, construindo parcerias duradouras baseadas em confiança, excelência e resultados comprovados.',
+        'Ser referência em soluções inteligentes, que transformam a tecnologia em resultados reais para empresas em todo o Brasil.',
     },
     {
-      icon: <BarChart3 className="h-8 w-8 text-blue-500" />,
+      icon: <HeartHandshake className="h-8 w-8 text-turquoise" />,
       title: 'Valores',
-      description:
-        'Integridade, excelência, inovação, compromisso com o cliente e responsabilidade são os pilares que orientam todas as nossas ações e relacionamentos.',
+      description: 'Compromisso com o resultado • Atendimento humanizado e ágil • Inovação com simplicidade • Ética e responsabilidade • Foco na excelência do serviço',
     },
   ];
 
@@ -73,7 +72,7 @@ const About = () => {
   };
 
   return (
-    <section ref={sectionRef} id="about" className="py-16 bg-white">
+    <section ref={sectionRef} id="about" className="py-16 bg-darkgray-800">
       <div className="section-container">
         <motion.div
           className="text-center max-w-3xl mx-auto mb-12"
@@ -81,14 +80,18 @@ const About = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="inline-block px-3 py-1 mb-4 text-sm font-medium text-blue-600 bg-blue-100 rounded-full">
+          <div className="inline-block px-3 py-1 mb-4 text-sm font-medium text-turquoise bg-turquoise/10 rounded-full">
             Sobre Nós
           </div>
-          <h2 className="section-title">Quem Somos</h2>
-          <p className="section-subtitle">
-            Há mais de 15 anos no mercado, oferecemos soluções contábeis completas e personalizadas para empresas de
-            todos os portes e segmentos. Nossa equipe é formada por profissionais altamente qualificados e em constante
-            atualização.
+          <h2 className="section-title text-white">Quem Somos</h2>
+          <p className="section-subtitle text-gray-300">
+            Fundada em 2014 e consolidada como Pessoa Jurídica em 2020, a Infor SHIFT Soluções Inteligentes nasceu com o propósito de oferecer tecnologia acessível, robusta e eficaz para empresas que desejam evoluir.
+          </p>
+          <p className="section-subtitle text-gray-300 mt-4">
+            Atuamos com sistemas personalizados, consultoria em TI, desenvolvimento de soluções e apoio contábil, sempre com foco em agilidade, inovação e atendimento humanizado.
+          </p>
+          <p className="section-subtitle text-gray-300 mt-4">
+            Com sede em Arapiraca – AL e atendimento remoto em todo o Brasil, somos movidos por um compromisso simples: entregar soluções que fazem a diferença na rotina dos nossos clientes.
           </p>
         </motion.div>
 
@@ -96,16 +99,16 @@ const About = () => {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-subtle card-hover"
+              className="bg-darkgray-700 rounded-xl p-6 shadow-subtle card-hover"
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.7, delay: 0.2 + index * 0.1 }}
             >
-              <div className="mb-4 bg-blue-50 w-16 h-16 rounded-lg flex items-center justify-center">
+              <div className="mb-4 bg-darkgray-600 w-16 h-16 rounded-lg flex items-center justify-center">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-slate-600">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
             </motion.div>
           ))}
         </div>

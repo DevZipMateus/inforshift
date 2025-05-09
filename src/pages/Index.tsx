@@ -65,7 +65,7 @@ const Index = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="overflow-hidden"
+      className="overflow-hidden bg-darkgray-800"
     >
       <Header />
       <main className="space-y-0">

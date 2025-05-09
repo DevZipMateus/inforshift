@@ -2,10 +2,14 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,19 +32,24 @@ const Header = () => {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     
-    // Handle "Início" link specially to scroll to top
-    if (href === '#home') {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
+    // If we're not on the home page, navigate there first
+    if (!isHomePage) {
+      navigate('/', { state: { scrollTo: href } });
     } else {
-      const element = document.querySelector(href);
-      if (element) {
+      // Handle "Início" link specially to scroll to top
+      if (href === '#home') {
         window.scrollTo({
-          top: element.getBoundingClientRect().top + window.scrollY - 100,
+          top: 0,
           behavior: 'smooth',
         });
+      } else {
+        const element = document.querySelector(href);
+        if (element) {
+          window.scrollTo({
+            top: element.getBoundingClientRect().top + window.scrollY - 100,
+            behavior: 'smooth',
+          });
+        }
       }
     }
     
@@ -62,13 +71,13 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="block">
+            <Link to="/" className="block">
               <img 
                 src="/lovable-uploads/a48b6946-07b3-49bd-b280-bc396f94a40e.png" 
                 alt="Infor SHIFT Logo" 
                 className="h-10 w-auto"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop navigation */}

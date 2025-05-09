@@ -1,6 +1,7 @@
 
 import { useEffect } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile'; 
+import { useLocation } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
@@ -9,10 +10,12 @@ import Services from '@/components/sections/Services';
 import Contact from '@/components/sections/Contact';
 import Partner from '@/components/sections/Partner';
 import FloatingButton from '@/components/ui/FloatingButton';
+import EgestorERP from '@/components/sections/EgestorERP';
 import { motion } from 'framer-motion';
 
 const Index = () => {
   const isMobile = useIsMobile();
+  const location = useLocation();
 
   useEffect(() => {
     // Smooth scroll function for anchor links
@@ -40,6 +43,24 @@ const Index = () => {
     };
   }, [isMobile]);
 
+  // Handle scroll to section after navigation from other pages
+  useEffect(() => {
+    // Check if we have a scroll target from navigation
+    if (location.state && location.state.scrollTo) {
+      const target = location.state.scrollTo;
+      setTimeout(() => {
+        const element = document.querySelector(target);
+        if (element) {
+          const offset = isMobile ? 60 : 80;
+          window.scrollTo({
+            top: element.getBoundingClientRect().top + window.scrollY - offset,
+            behavior: 'smooth',
+          });
+        }
+      }, 100); // Small delay to ensure DOM is ready
+    }
+  }, [location, isMobile]);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -47,10 +68,11 @@ const Index = () => {
       className="overflow-hidden"
     >
       <Header />
-      <main className="space-y-0"> {/* Removed spacing between sections */}
+      <main className="space-y-0">
         <Hero />
         <About />
         <Services />
+        <EgestorERP />
         <Partner />
         <Contact />
       </main>

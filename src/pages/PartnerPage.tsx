@@ -1,52 +1,56 @@
-
 import { motion } from 'framer-motion';
 import { Instagram } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import FloatingButton from '@/components/ui/FloatingButton';
 import { Button } from '@/components/ui/button';
-
 const PartnerPage = () => {
-  return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
-      className="overflow-hidden bg-darkgray-900"
-    >
+  return <motion.div initial={{
+    opacity: 0
+  }} animate={{
+    opacity: 1
+  }} className="overflow-hidden bg-darkgray-900">
       <Header />
       <main>
         <section className="pt-24 pb-16 bg-darkgray-800">
           <div className="section-container">
             <div className="flex flex-col items-center text-center mb-10">
-              <motion.h1 
-                className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" 
-                initial={{ opacity: 0, y: 20 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.7 }}
-              >
+              <motion.h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" initial={{
+              opacity: 0,
+              y: 20
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.7
+            }}>
                 Nossa Parceira: <span className="text-turquoise">Premium Contábil</span>
               </motion.h1>
               
-              <motion.div 
-                className="mb-8" 
-                initial={{ opacity: 0, y: 20 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.7, delay: 0.2 }}
-              >
-                <img 
-                  alt="Premium Contábil" 
-                  className="max-w-full h-auto max-h-60 object-contain mx-auto" 
-                  src="/lovable-uploads/db309268-f020-405e-8671-22fafb08b2d3.png" 
-                />
+              <motion.div className="mb-8" initial={{
+              opacity: 0,
+              y: 20
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.7,
+              delay: 0.2
+            }}>
+                <img alt="Premium Contábil" className="max-w-full h-auto max-h-60 object-contain mx-auto" src="/lovable-uploads/e9254d99-fb65-4324-b830-87f1d51c90a5.png" />
               </motion.div>
             </div>
             
-            <motion.div 
-              className="bg-darkgray-700 rounded-xl shadow-elevation p-6 md:p-8 max-w-4xl mx-auto mb-10" 
-              initial={{ opacity: 0, y: 20 }} 
-              animate={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.7, delay: 0.3 }}
-            >
+            <motion.div className="bg-darkgray-700 rounded-xl shadow-elevation p-6 md:p-8 max-w-4xl mx-auto mb-10" initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.7,
+            delay: 0.3
+          }}>
               <p className="text-lg mb-6 text-slate-200">
                 Na Infor SHIFT Soluções Inteligentes, acreditamos que o sucesso empresarial é construído por meio de parcerias sólidas e confiáveis. É com orgulho que apresentamos a Premium Contábil como nossa aliada estratégica na área contábil.
               </p>
@@ -68,12 +72,16 @@ const PartnerPage = () => {
               </p>
             </motion.div>
             
-            <motion.div 
-              className="flex flex-col md:flex-row items-center justify-center gap-6 bg-darkgray-800 rounded-xl p-6 max-w-4xl mx-auto" 
-              initial={{ opacity: 0, y: 20 }} 
-              animate={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.7, delay: 0.4 }}
-            >
+            <motion.div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-darkgray-800 rounded-xl p-6 max-w-4xl mx-auto" initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.7,
+            delay: 0.4
+          }}>
               <div>
                 <h3 className="text-xl font-bold mb-2 text-white">Contato:</h3>
                 <p className="text-slate-300">Premium Contábil</p>
@@ -81,12 +89,7 @@ const PartnerPage = () => {
               </div>
               
               <Button asChild className="bg-turquoise hover:bg-turquoise-600 text-darkgray-900">
-                <a 
-                  href="https://www.instagram.com/premiumcontabil?igsh=bzA1amQ0aHZ3N2dq" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="flex items-center gap-2"
-                >
+                <a href="https://www.instagram.com/premiumcontabil?igsh=bzA1amQ0aHZ3N2dq" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Instagram className="w-5 h-5" />
                   Siga no Instagram
                 </a>
@@ -97,8 +100,6 @@ const PartnerPage = () => {
       </main>
       <FloatingButton />
       <Footer />
-    </motion.div>
-  );
+    </motion.div>;
 };
-
 export default PartnerPage;

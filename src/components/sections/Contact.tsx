@@ -35,7 +35,7 @@ const Contact = () => {
 
   const handleWhatsAppClick = () => {
     // Open WhatsApp with predefined message
-    window.open('https://wa.me/5521999999999?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20contábeis.', '_blank');
+    window.open('https://wa.me/5582988546023?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20Infor%20SHIFT.', '_blank');
     
     // Show toast notification
     toast({
@@ -48,21 +48,21 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6 text-blue-500" />,
       title: 'Telefone',
-      details: '(21) 99999-9999',
-      action: 'tel:+5521999999999',
+      details: '(82) 98854-6023',
+      action: 'tel:+5582988546023',
       actionText: 'Contato via Telefone'
     },
     {
       icon: <Mail className="h-6 w-6 text-blue-500" />,
       title: 'Email',
-      details: 'contato@contabilidade.com',
-      action: 'mailto:contato@contabilidade.com',
+      details: 'suporteinforshift@gmail.com',
+      action: 'mailto:suporteinforshift@gmail.com',
       actionText: 'Contato via Email'
     },
     {
       icon: <MapPin className="h-6 w-6 text-blue-500" />,
       title: 'Endereço',
-      details: 'Av. Presidente Vargas, 123, Centro, Rio de Janeiro - RJ',
+      details: 'Rua Floracy da Silva Barros, 141, APTO102, Arapiraca - AL',
       action: 'https://maps.google.com',
       actionText: 'Ver no Mapa'
     }

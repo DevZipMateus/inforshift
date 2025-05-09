@@ -9,13 +9,14 @@
 /* Base styles for the 60-30-10 rule */
 :root {
   --color-primary: #f8fafc; /* Slate 50 - 60% */
-  --color-secondary: #0070F0; /* Blue 500 - 30% */
-  --color-accent: #0f172a; /* Slate 900 - 10% */
+  --color-secondary: #40E0D0; /* Turquoise - 30% */
+  --color-accent: #333333; /* Dark Gray - 10% */
 }
 
 body {
   background-color: var(--color-primary);
   color: var(--color-accent);
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Optimizing spacing between sections */
@@ -31,10 +32,10 @@ section {
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #40E0D0aa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #40E0D0aa);
 }
 
 @keyframes logo-spin {

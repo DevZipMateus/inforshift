@@ -1,7 +1,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,7 +37,7 @@ const Hero = () => {
       id="home"
     >
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-slate-50/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-turquoise/10 to-slate-50/95"></div>
         <div className="absolute inset-0 opacity-40 bg-[url('/images/pattern.svg')] bg-repeat"></div>
       </div>
 
@@ -48,39 +47,56 @@ const Hero = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-blue-600 bg-blue-100 rounded-full">
-            Escritório de Contabilidade
+          <div className="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-turquoise bg-turquoise/10 rounded-full">
+            Sistemas e Consultoria TI
           </div>
         </motion.div>
 
-        <motion.h1
-          className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight mb-6 max-w-4xl"
+        <motion.div
+          className="mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          Soluções Contábeis Personalizadas para o{' '}
-          <span className="text-gradient">Sucesso do Seu Negócio</span>
+          <img 
+            src="/lovable-uploads/a48b6946-07b3-49bd-b280-bc396f94a40e.png" 
+            alt="Infor SHIFT Logo" 
+            className="h-32 w-auto mx-auto"
+          />
+        </motion.div>
+
+        <motion.h1
+          className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight mb-6 max-w-4xl text-darkgray-700"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          Transformando negócios com{' '}
+          <span className="text-turquoise">Soluções Inteligentes</span>
         </motion.h1>
 
         <motion.p
           className="text-lg md:text-xl text-slate-600 max-w-2xl mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
         >
-          Combinamos experiência e tecnologia para oferecer serviços contábeis eficientes e
-          estratégicos, ajudando sua empresa a crescer e prosperar.
+          Na Infor SHIFT, unimos tecnologia, experiência e atenção ao cliente para transformar a forma como as empresas lidam com seus desafios em TI e gestão.
         </motion.p>
 
         <motion.div
           className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <a href="#contact" className="btn-primary">
-            Agende uma Consulta
+          <a 
+            href="https://wa.me/5582988546023?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20Infor%20SHIFT."
+            target="_blank"
+            rel="noopener noreferrer" 
+            className="btn-primary"
+          >
+            Entre em Contato
           </a>
           <a href="#services" className="btn-secondary">
             Conheça Nossos Serviços

@@ -63,29 +63,26 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				blue: {
-					50: '#E6F0FD',
-					100: '#CCE2FC',
-					200: '#99C5F9',
-					300: '#66A9F6',
-					400: '#338CF3',
-					500: '#0070F0',
-					600: '#005AC0',
-					700: '#004390',
-					800: '#002D60',
-					900: '#001630',
+				darkgray: {
+					DEFAULT: '#333333',
+					500: '#333333',
+					600: '#2a2a2a',
+					700: '#222222',
+					800: '#1a1a1a',
+					900: '#111111',
 				},
-				slate: {
-					50: '#f8fafc',
-					100: '#f1f5f9',
-					200: '#e2e8f0',
-					300: '#cbd5e1',
-					400: '#94a3b8',
-					500: '#64748b',
-					600: '#475569',
-					700: '#334155',
-					800: '#1e293b',
-					900: '#0f172a',
+				turquoise: {
+					DEFAULT: '#40E0D0',
+					50: '#E6FAF8',
+					100: '#CDF5F1',
+					200: '#9AEBE3',
+					300: '#67E0D5',
+					400: '#40E0D0',
+					500: '#22C9B8',
+					600: '#1BA293',
+					700: '#157A6F',
+					800: '#0E514A',
+					900: '#072926',
 				}
 			},
 			borderRadius: {
@@ -149,16 +146,16 @@ export default {
 				'bounce-ease': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				display: ['Montserrat', 'sans-serif']
+				sans: ['Roboto', 'sans-serif'],
+				display: ['Roboto', 'sans-serif']
 			},
 			boxShadow: {
 				'subtle': '0 2px 10px rgba(0, 0, 0, 0.05)',
 				'elevation': '0 5px 30px rgba(0, 0, 0, 0.08)'
 			},
 			backgroundImage: {
-				'hero-pattern': "url('/images/hero-bg.jpg')",
-				'gradient-blue': 'linear-gradient(45deg, #0070F0 0%, #338CF3 100%)',
+				'hero-pattern': "url('/images/pattern.svg')",
+				'gradient-turquoise': 'linear-gradient(45deg, #40E0D0 0%, #67E0D5 100%)',
 			}
 		}
 	},

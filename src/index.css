@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,8 +9,8 @@
   :root {
     /* 60-30-10 Color Rule */
     --primary-color: 210 40% 98%; /* Slate 50 - 60% */
-    --secondary-color: 216 100% 50%; /* Blue 500 - 30% */
-    --accent-color: 222 47% 11%; /* Slate 900 - 10% */
+    --secondary-color: 180 75% 45%; /* Turquoise - 30% */
+    --accent-color: 210 10% 23%; /* Dark Gray - 10% */
     
     --background: var(--primary-color);
     --foreground: var(--accent-color);
@@ -113,7 +113,7 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-3 text-slate-900;
+    @apply text-3xl md:text-4xl font-bold mb-3 text-gray-800;
   }
   
   .section-subtitle {
@@ -121,7 +121,7 @@
   }
   
   .btn-primary {
-    @apply bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200;
+    @apply bg-turquoise hover:bg-turquoise-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200;
   }
   
   .btn-secondary {
@@ -133,20 +133,20 @@
   }
   
   .nav-link {
-    @apply relative px-3 py-2 text-slate-700 hover:text-blue-500 transition-colors duration-200 font-medium;
+    @apply relative px-3 py-2 text-slate-700 hover:text-turquoise transition-colors duration-200 font-medium;
   }
   
   .nav-link-active {
-    @apply text-blue-500 font-semibold;
+    @apply text-turquoise font-semibold;
   }
   
   .nav-link-active::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 rounded-full;
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-turquoise rounded-full;
   }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-blue;
+    @apply bg-clip-text text-transparent bg-gradient-turquoise;
   }
   
   /* WhatsApp floating button animations */

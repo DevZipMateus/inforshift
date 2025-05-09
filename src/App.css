@@ -8,7 +8,7 @@
 
 /* Base styles for the 60-30-10 rule */
 :root {
-  --color-primary: #222222; /* Dark Gray - 60% */
+  --color-primary: #111111; /* Dark Gray - 60% */
   --color-secondary: #40E0D0; /* Turquoise - 30% */
   --color-accent: #f8fafc; /* Light Gray - 10% */
 }

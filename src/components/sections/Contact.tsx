@@ -46,21 +46,21 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Phone className="h-6 w-6 text-blue-500" />,
+      icon: <Phone className="h-6 w-6 text-turquoise" />,
       title: 'Telefone',
       details: '(82) 98854-6023',
       action: 'tel:+5582988546023',
       actionText: 'Contato via Telefone'
     },
     {
-      icon: <Mail className="h-6 w-6 text-blue-500" />,
+      icon: <Mail className="h-6 w-6 text-turquoise" />,
       title: 'Email',
       details: 'suporteinforshift@gmail.com',
       action: 'mailto:suporteinforshift@gmail.com',
       actionText: 'Contato via Email'
     },
     {
-      icon: <MapPin className="h-6 w-6 text-blue-500" />,
+      icon: <MapPin className="h-6 w-6 text-turquoise" />,
       title: 'Endereço',
       details: 'Rua Floracy da Silva Barros, 141, APTO102, Arapiraca - AL',
       action: 'https://maps.google.com',
@@ -69,7 +69,7 @@ const Contact = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="contact" className="bg-white py-16">
+    <section ref={sectionRef} id="contact" className="bg-darkgray-900 py-16">
       <div className="section-container px-4 md:px-8">
         <motion.div 
           className="text-center max-w-3xl mx-auto mb-12" 
@@ -77,12 +77,12 @@ const Contact = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="inline-block px-3 py-1 mb-4 text-sm font-medium text-blue-600 bg-blue-100 rounded-full">
+          <div className="inline-block px-3 py-1 mb-4 text-sm font-medium text-turquoise bg-turquoise/10 rounded-full">
             Contato
           </div>
           <h2 className="section-title text-3xl md:text-4xl font-bold mb-4">Entre em Contato Conosco</h2>
-          <p className="section-subtitle text-slate-600">
-            Estamos prontos para atender às suas necessidades contábeis. Entre em contato 
+          <p className="section-subtitle text-gray-300">
+            Estamos prontos para atender às suas necessidades. Entre em contato 
             através de um dos nossos canais de atendimento ou nos envie uma mensagem pelo WhatsApp.
           </p>
         </motion.div>
@@ -95,9 +95,9 @@ const Contact = () => {
             animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <div className="w-full p-8 rounded-xl shadow-lg bg-white border border-slate-100">
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Fale Conosco</h3>
-              <p className="text-slate-600 mb-8">
+            <div className="w-full p-8 rounded-xl shadow-lg bg-darkgray-700 border border-darkgray-600">
+              <h3 className="text-2xl font-bold text-white mb-6">Fale Conosco</h3>
+              <p className="text-gray-300 mb-8">
                 Clique no botão abaixo para iniciar uma conversa no WhatsApp com nossa equipe de atendimento.
               </p>
               
@@ -109,7 +109,7 @@ const Contact = () => {
                 Conversar no WhatsApp
               </Button>
               
-              <div className="mt-8 text-center text-slate-500 text-sm">
+              <div className="mt-8 text-center text-gray-400 text-sm">
                 Horário de atendimento: Segunda a Sexta, das 9h às 18h
               </div>
             </div>
@@ -124,16 +124,16 @@ const Contact = () => {
           >
             <div className="space-y-8">
               {contactInfo.map((item, index) => (
-                <div key={index} className="flex items-start hover:bg-slate-50 p-4 rounded-lg transition-colors duration-200">
-                  <div className="mr-4 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-50">
+                <div key={index} className="flex items-start hover:bg-darkgray-800 p-4 rounded-lg transition-colors duration-200">
+                  <div className="mr-4 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-darkgray-800">
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium text-slate-900">{item.title}</h4>
-                    <p className="mt-1 text-slate-600">{item.details}</p>
+                    <h4 className="text-lg font-medium text-white">{item.title}</h4>
+                    <p className="mt-1 text-gray-300">{item.details}</p>
                     <a 
                       href={item.action} 
-                      className="mt-2 inline-block text-sm font-medium text-blue-600 hover:text-blue-700 hover:underline"
+                      className="mt-2 inline-block text-sm font-medium text-turquoise hover:text-turquoise-400 hover:underline"
                     >
                       {item.actionText}
                     </a>
@@ -142,7 +142,7 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="mt-10 overflow-hidden rounded-xl border border-slate-200 h-64 shadow-md">
+            <div className="mt-10 overflow-hidden rounded-xl border border-darkgray-600 h-64 shadow-md">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.2960758544593!2d-43.19234492359807!3d-22.903458836872207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5fd24e0bff%3A0x99447fc2399718e9!2sAv.%20Pres.%20Vargas%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1718121266831!5m2!1spt-BR!2sbr" 
                 width="100%" 

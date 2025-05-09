@@ -60,12 +60,12 @@ const Hero = () => {
             <img 
               src="/lovable-uploads/3efc66c6-3e03-4899-a967-63ba0eb4f50c.png" 
               alt="Infor SHIFT Brain Logo" 
-              className="h-auto w-60 md:w-80 object-contain"
+              className="h-auto w-72 md:w-96 object-contain"
             />
             <img 
               src="/lovable-uploads/19635b6a-83e2-4dcc-9bb0-89e19d03b96b.png" 
               alt="Infor SHIFT Text Logo" 
-              className="h-auto w-64 md:w-96 object-contain"
+              className="h-auto w-72 md:w-96 object-contain"
             />
           </div>
         </motion.div>

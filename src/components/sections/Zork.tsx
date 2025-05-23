@@ -10,6 +10,7 @@ const Zork = () => {
   const features = [
     'Centralização de canais: Reúne mensagens de diferentes plataformas em uma única interface, facilitando o gerenciamento e a resposta rápida aos clientes.',
     'Integrações com redes sociais e mensageiros: Suporta integração com WhatsApp, Instagram, Facebook, Telegram, SMS e e-mail, permitindo uma comunicação abrangente com os clientes.',
+    <span key="highlight" className="font-bold text-turquoise">O atendimento pode ser feito de duas maneiras: via ChatBot e Inteligência Artificial!</span>,
     'Agilidade e segurança: Oferece ferramentas que garantem respostas rápidas e seguras, com recursos de auditoria para monitoramento das interações.',
     'Aumento de produtividade: Automatiza processos de atendimento, reduzindo o tempo de resposta e melhorando a eficiência das equipes.',
     'Foco no sucesso do cliente: Visa proporcionar uma experiência de atendimento satisfatória, com respostas ágeis e dedicadas.'
@@ -52,7 +53,7 @@ const Zork = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-darkgray-700 rounded-lg p-6 border border-darkgray-600">
                 <p className="text-gray-300 leading-relaxed">
-                  • {feature}
+                  {index === 2 ? feature : `• ${feature}`}
                 </p>
               </div>
             ))}

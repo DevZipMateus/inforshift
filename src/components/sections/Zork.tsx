@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { MessageCircle } from 'lucide-react';
 
 const Zork = () => {
   const handleWhatsAppClick = () => {
@@ -70,7 +69,11 @@ const Zork = () => {
             onClick={handleWhatsAppClick}
             className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg gap-3 transition-all duration-300 transform hover:scale-105"
           >
-            <MessageCircle className="h-6 w-6" />
+            <img 
+              src="/lovable-uploads/097a7f34-6632-412c-b133-978b260d795b.png" 
+              alt="WhatsApp" 
+              className="w-6 h-6"
+            />
             Para saber mais clique aqui
           </Button>
         </div>

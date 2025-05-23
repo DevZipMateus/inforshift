@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile'; 
 import { useLocation } from 'react-router-dom';
@@ -11,6 +10,7 @@ import Contact from '@/components/sections/Contact';
 import Partner from '@/components/sections/Partner';
 import FloatingButton from '@/components/ui/FloatingButton';
 import EgestorERP from '@/components/sections/EgestorERP';
+import Zork from '@/components/sections/Zork';
 import { motion } from 'framer-motion';
 
 const Index = () => {
@@ -73,6 +73,7 @@ const Index = () => {
         <About />
         <Services />
         <EgestorERP />
+        <Zork />
         <Partner />
         <Contact />
       </main>
